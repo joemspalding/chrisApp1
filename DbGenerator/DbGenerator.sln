@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbGenerator", "DbGenerator\DbGenerator.csproj", "{691BA9CD-4222-4AD2-B9BF-C31DD72BD301}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{80671C35-8CAC-4453-ABDD-1590D4E31318}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{691BA9CD-4222-4AD2-B9BF-C31DD72BD301}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{691BA9CD-4222-4AD2-B9BF-C31DD72BD301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{691BA9CD-4222-4AD2-B9BF-C31DD72BD301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80671C35-8CAC-4453-ABDD-1590D4E31318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80671C35-8CAC-4453-ABDD-1590D4E31318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80671C35-8CAC-4453-ABDD-1590D4E31318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80671C35-8CAC-4453-ABDD-1590D4E31318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

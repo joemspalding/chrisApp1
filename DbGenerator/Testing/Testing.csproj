@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbGenerator\DbGenerator.csproj">
+      <Project>{691ba9cd-4222-4ad2-b9bf-c31dd72bd301}</Project>
+      <Name>DbGenerator</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
