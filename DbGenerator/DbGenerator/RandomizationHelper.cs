@@ -8,18 +8,29 @@ namespace DbGenerator
 {
     public class RandomizationHelper
     {
-        public string GetRandomString (int requestedLength)
+        private string RandomStringHelper(int requestedLength, string range)
         {
-            Random rnd = new Random();
-            char[] allLetters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-            string randomString = ""; 
 
-            while(randomString.Length < requestedLength)
+            Random rnd = new Random();
+            char[] allLetters = range.ToCharArray();
+            string randomizedString = "";
+
+            while (randomizedString.Length < requestedLength)
             {
-                randomString = randomString + allLetters[rnd.Next(allLetters.Length)];
+                randomizedString = randomizedString + allLetters[rnd.Next(allLetters.Length)];
             }
 
-            return randomString;
+            return randomizedString;
+        }
+
+        public string GetRandomString (int requestedLength)
+        {
+            return RandomStringHelper(requestedLength, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        }
+
+        public string GetKEYSMASH(int requestedLength)
+        {
+            return RandomStringHelper(requestedLength, "asdfghjklASDFGHJKL");
         }
 
         public string GetRandomInt(int requestedLength)
@@ -35,18 +46,7 @@ namespace DbGenerator
             return randomInt;
         }
 
-        public string GetKEYSMASH(int requestedLength)
-        {
-            Random rnd = new Random();
-            char[] allLetters = { 'a', 's', 'd', 'f', 'g', 'h', 'j', 'j', 'k', 'l'};
-            string keySmash = "";
 
-            while (keySmash.Length < requestedLength)
-            {
-                keySmash = keySmash + allLetters[rnd.Next(allLetters.Length)];
-            }
 
-            return keySmash;
-        }
     }
 }
