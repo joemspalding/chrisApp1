@@ -8,5 +8,6 @@ namespace DbGenerator
 {
     public class UserGenerator
     {
+        // Hey Bro!
     }
 }
