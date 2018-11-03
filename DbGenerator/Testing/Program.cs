@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DbGenerator;
+using DbGenerator.Abstract;
+using DbGenerator.Concrete;
+using DbGenerator.Models;
 
 namespace Testing
 {
@@ -11,9 +14,12 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            UserGenerator dbGenerator = new UserGenerator();
+            User user = new User();
+            IFactory factory = new Factory();
 
-            Console.WriteLine(dbGenerator.GetString());
+            user = factory.GetFieldStrategy("Joe").GenerateField(user);
+
+            Console.WriteLine(user.LastName);
         }
     }
 }
