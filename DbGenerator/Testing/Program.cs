@@ -12,8 +12,12 @@ namespace Testing
         static void Main(string[] args)
         {
             UserGenerator dbGenerator = new UserGenerator();
+            RandomizationHelper stringRandomizer = new RandomizationHelper();
 
             Console.WriteLine(dbGenerator.GetString());
+            Console.WriteLine(stringRandomizer.GetRandomString(5));
+            Console.WriteLine(stringRandomizer.GetRandomInt(5));
+            Console.WriteLine(stringRandomizer.GetKEYSMASH(25));
         }
     }
 }
