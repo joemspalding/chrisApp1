@@ -45,7 +45,8 @@
     <Compile Include="Abstract\IUserGenerator.cs" />
     <Compile Include="Concrete\Factory.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Concrete\UserGenerator.cs" />
+    <Compile Include="RandomizationHelper.cs" />
+    <Compile Include="UserGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strategies\IFieldGeneratorStrategy.cs" />
     <Compile Include="Strategies\JoeFieldGenerator.cs" />
