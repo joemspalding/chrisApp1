@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{691BA9CD-4222-4AD2-B9BF-C31DD72BD301}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DbGenerator</RootNamespace>
-    <AssemblyName>DbGenerator</AssemblyName>
+    <ProjectGuid>{C7364AB9-E27A-4BA9-8C47-B20EFAB145DC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DbGenerator.Abstract</RootNamespace>
+    <AssemblyName>DbGenerator.Abstract</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,17 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IFactory.cs" />
-    <Compile Include="Abstract\IUserGenerator.cs" />
-    <Compile Include="Concrete\Factory.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="RandomizationHelper.cs" />
-    <Compile Include="UserGenerator.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategies\IFieldGeneratorStrategy.cs" />
-    <Compile Include="Strategies\JoeFieldGenerator.cs" />
-    <Compile Include="Strategies\SSNGeneratorStrategy.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
